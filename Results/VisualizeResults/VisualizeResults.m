@@ -41,11 +41,11 @@ blackBackground = false; % if false then white background
 
 %% Visualization of RBC while flowing in a vessel
 
-% VisualizeMembraneShapeInVessel
+VisualizeMembraneShapeInVessel
 
 % CaptureFramesMembraneShapeInVessel
 
-VisualizeIsotropicMembraneTensionInVessel
+% VisualizeIsotropicMembraneTensionInVessel
 
 % CaptureFramesIsotropicMembraneTensionInVessel
 
