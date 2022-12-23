@@ -24,7 +24,8 @@ NSTEPS = length(Time);
 timeStepIncrement = 1;
 
 %% Choose a view angle
-viewInd = [0 90];
+% viewInd = [0 90];
+viewInd = [-45 30];
 
 %% Choose a background color for visualization
 blackBackground = true; % if false then white background
