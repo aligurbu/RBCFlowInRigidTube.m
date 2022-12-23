@@ -1,6 +1,7 @@
 %% Post-processing the flow around the RBC motion while flowing in the vessel
 clear all; close all; clc;
 addpath(genpath('../../../RBCFlowInRigidTube.m'))
+verbose_Plot = false;
 
 %% Input the model and parameters for the analysis from Models folder
 LoadElasRBC_Short_Pr4_2_Time0_75s
@@ -21,3 +22,16 @@ NSTEPS = length(Time);
 
 %%
 timeStepIncrement = 1;
+
+%% Choose a view angle
+viewInd = [0 90];
+
+%% Choose a background color for visualization
+blackBackground = true; % if false then white background
+
+%% Visualization settings
+VisualizeSettings
+TransparencyInd = 0;
+
+%%
+fclose('all');
