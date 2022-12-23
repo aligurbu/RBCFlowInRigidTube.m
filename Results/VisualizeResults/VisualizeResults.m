@@ -35,7 +35,7 @@ viewInd = [0 90];
 name = [name,'_xy'];
 
 %% Choose a background color for visualization
-blackBackground = true; % if false then white background
+blackBackground = false; % if false then white background
 
 %% Run Visualize m-files one at a time.
 
@@ -43,6 +43,8 @@ blackBackground = true; % if false then white background
 
 % VisualizeMembraneShapeInVessel
 
-CaptureFramesMembraneShapeInVessel
+% CaptureFramesMembraneShapeInVessel
+
+VisualizeIsotropicMembraneTensionInVessel
 
 fclose('all');
