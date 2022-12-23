@@ -4,8 +4,6 @@ Nup = Rendering*N;
 nlatup = Nup + 1;
 nlonup = 2*Nup + 1;
 
-numDofPerNode = size(coord,1); % Number of velocity components
-
 %% Visualization settings 
 VisualizeSettings
 
