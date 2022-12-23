@@ -150,7 +150,14 @@ Telem(1:numDofPerNode:numDofPerElem,inletelem) = InletPressure;
 %% Set prescribed velocity (all zero for now)
 unodal = zeros(numDofPerNode, numNodes);
 
-
+%% Array to store element DOF numbers
+elemDofNum = zeros(numDofPerElem, numElem);
+for m = 1:numElem
+    for n = 1:numNodesPerElem
+        elemDofNum((n-1)*numDofPerNode+(1:numDofPerNode),m) = ...
+                          (connect(n,m)-1)*numDofPerNode+(1:numDofPerNode);
+    end
+end
 
 
 
