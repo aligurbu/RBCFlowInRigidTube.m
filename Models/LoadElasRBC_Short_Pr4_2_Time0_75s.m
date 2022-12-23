@@ -20,3 +20,12 @@ ReferenceParameters
 %% Load mesh
 %% Vessel models
 load ShortMicrocapillary_16El.mat
+
+%% Parameters 
+%% Fluid properties
+%% Viscosity of exterior fluid
+mu_out = 1.2*10^(-3); % Pa.s 
+mu = mu_out/RefViscosity; 
+%% Viscosity of interior fluid
+mu_in = 6*10^(-3); % Pa.s
+lam = mu_in/RefViscosity; % lam*mu
