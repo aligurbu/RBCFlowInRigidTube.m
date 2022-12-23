@@ -60,3 +60,9 @@ InletPressure = PressureDrop/RefPressure; % Inlet pressure
 StVenantKirchhoff = false;
 NeoHookean = false;
 Skalak = true;
+
+%% Degree of spherical harmonic expansion
+N = 16;
+UpSampleFactor = 2; % Up-sample ratio for the force calculations
+NGSphere = 2*N; % Quadrature on sphere parameter
+N_EqSpaced = 2*N;
