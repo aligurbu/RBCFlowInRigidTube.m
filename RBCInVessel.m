@@ -11,7 +11,8 @@ verbose_Plot = true;
 
 %% Input the model and parameters for the analysis from Models folder
 % LoadElasRBC_Short_Pr4_2_Time0_75s
-LoadElasRBC_RefCons_6mic_Pr8
+% LoadElasRBC_RefCons_6mic_Pr8
+LoadLongConstrictedVessel_16El
 
 %% Vessel set-up
 ParametersForTheAnalysis_Vessel
@@ -19,6 +20,7 @@ ParametersForTheAnalysis_Vessel
 %% RBC set-up
 ParametersForTheAnalysis_RBC
 
+%% Check the geometry and position of RBC
 if verbose_Plot
     figure('Color','white')
     hold on
