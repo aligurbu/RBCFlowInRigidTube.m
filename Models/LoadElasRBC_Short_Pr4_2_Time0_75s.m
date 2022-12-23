@@ -106,7 +106,7 @@ numGaussPointsPolar = 20;
 [grx, grw] = lgwt(numGaussPointsPolar, -1, 1); 
 [gtx, gtw] = lgwt(numGaussPointsPolar, -1, 1); 
 
-%% Set-up
+%% Vessel set-up
 numNodes = size(coord,2); % Total number of nodes in the model
 
 numElem = size(connect,2); % Total number of elements in the model
@@ -119,7 +119,6 @@ numDofPerElem = numNodesPerElem * numDofPerNode;
                                  % Number of DOF associated with an element
 ModelSize = (numNodes*numDofPerNode + 3*(N+1)^2);
 
-%% Vessel set-up
 %% Set the nodal boundary conditions
 % The nodal values of the zero-velocity field on the sidewall surface are
 % assigned with the Dirichlet nodes, which are the nodes on the sidewall
