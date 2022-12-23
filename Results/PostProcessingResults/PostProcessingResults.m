@@ -33,5 +33,8 @@ blackBackground = true; % if false then white background
 VisualizeSettings
 TransparencyInd = 0;
 
+%% Set-up the evaluation points
+SetUp_EvaluationPoints
+
 %%
 fclose('all');
