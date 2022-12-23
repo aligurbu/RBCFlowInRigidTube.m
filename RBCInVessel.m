@@ -34,3 +34,8 @@ if verbose_Plot
     xlabel('X'); ylabel('Y'); zlabel('Z');
     view([0 90])
 end
+
+%% Field points (Gauss quadrature nodes)
+[FieldPts, BasisFn, NormalV, Weights] = ...
+                   FieldProperties(coord, connect, numElem, ...
+                                   numDofPerNode, numNodesPerElem, gx, gw);
