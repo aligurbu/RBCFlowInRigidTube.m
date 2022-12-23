@@ -119,6 +119,42 @@ numDofPerElem = numNodesPerElem * numDofPerNode;
                                  % Number of DOF associated with an element
 ModelSize = (numNodes*numDofPerNode + 3*(N+1)^2);
 
+%% Set the nodal boundary conditions
+% bcs == 1; Dirichlet B.C; velocity is known
+% bcs == 0; Neumann B.C; traction is known
+bcs = zeros(size(coord));
+bcs(:) = 1;
+bcs(:,setdiff(inletnode,wallnode)) = 0;
+bcs(:,setdiff(outletnode,wallnode)) = 0;
+
+DirichletNode = wallnode;
+NeumannNode = union(setdiff(inletnode,wallnode), ...
+                    setdiff(outletnode,wallnode));
+
+DirichletDofs = find(bcs == 1); % Dofs of the wall nodes
+NeumannDofs = find(bcs == 0);   % Dofs of the inlet/outlet nodes 
+                                % excluding dofs related to the edge nodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
