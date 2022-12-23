@@ -9,3 +9,10 @@ clear all; close all; clc;
 addpath(genpath('../RBCFlowInRigidTube.m'))
 
 %% Input the model and parameters for the analysis from Models folder
+LoadElasRBC_Short_Pr4_2_Time0_75s
+
+%% Vessel set-up
+ParametersForTheAnalysis_Vessel
+
+%% RBC set-up
+ParametersForTheAnalysis_RBC
