@@ -40,8 +40,8 @@ SetUp_EvaluationPoints
 %% Post-processing
 %% Run once and load the results of post-processing.
 %% Computing the velocity field at the evaluation points takes times
-% PostProcessing_RBCInVessel
-
+PostProcessing_RBCInVessel
+return
 if ~MembraneViscoelasticity
     if strcmp(nameVessel,'ShortMicrocapillary_16El')
         load PostProc_ElasRBC_Short_Pr4_2_Time0_75s.mat
