@@ -119,7 +119,17 @@ numDofPerElem = numNodesPerElem * numDofPerNode;
                                  % Number of DOF associated with an element
 ModelSize = (numNodes*numDofPerNode + 3*(N+1)^2);
 
+%% Vessel set-up
 %% Set the nodal boundary conditions
+% The nodal values of the zero-velocity field on the sidewall surface are
+% assigned with the Dirichlet nodes, which are the nodes on the sidewall
+% including the edge nodes.
+% Similarly, the nodal values of the inlet pressure and zero-pressure
+% fields are assigned with the Neumann nodes, which are the nodes on the
+% inlet and the outlet surfaces excluding the edge nodes.
+% Therefore, the unknown fields consist of the nodal values of the inlet
+% velocity, the outlet velocity and the wall traction fields.
+
 % bcs == 1; Dirichlet B.C; velocity is known
 % bcs == 0; Neumann B.C; traction is known
 bcs = zeros(size(coord));
@@ -164,19 +174,3 @@ coordLocation = false(size(coord,2),1);
 
 %% Set the center of the mass of RBC to initial position, InitXi
 constrainCenterOfMassToInitialPosition = true;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
