@@ -84,7 +84,15 @@ NSTEPS = ceil(EndTime/DT);
 
 SaveAtIncrementalSteps = 50; % Save the data at the increment of this steps
 
-
+%% Adaptive time-stepping parameters
+Time = 0;
+maxCounterTime = 100;
+counterTime = 1;
+IterationCounter = zeros(maxCounterTime,1);
+stableCounter = 1;
+maxDT = 0.1; % declaring very high number to initialize it.
+minDT = DT;
+maxStableDT = 0;
 
 
 
