@@ -55,3 +55,8 @@ PressureGradient = 4.2; % mmHg/mm
 PressureGradient = PressureGradient*133.322*10^(3); % Pa/meter
 PressureDrop = PressureGradient*(TubeLength*RefLength); % Pa
 InletPressure = PressureDrop/RefPressure; % Inlet pressure
+
+%% Constitutive equations for membrane mechanics
+StVenantKirchhoff = false;
+NeoHookean = false;
+Skalak = true;
