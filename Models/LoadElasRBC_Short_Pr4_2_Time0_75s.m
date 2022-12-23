@@ -48,3 +48,10 @@ ArtificialSpring = 100/3 * ShearModulus; % N/m
 % ArtificialSpring = 6*ShearModulus; % N/m 
 RelaxationTime = mu_Membrane / ArtificialSpring; % s 
 Tau = RelaxationTime*RefShearRate; % the relaxation time of the Maxwell element
+
+%% Applied inlet pressure 
+PressureGradient = 4.2; % mmHg/mm
+% 1 mmHg = 133.322 Pa
+PressureGradient = PressureGradient*133.322*10^(3); % Pa/meter
+PressureDrop = PressureGradient*(TubeLength*RefLength); % Pa
+InletPressure = PressureDrop/RefPressure; % Inlet pressure
