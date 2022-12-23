@@ -26,10 +26,6 @@ for nstep = 1:NSTEPS
 end
 
 %%
-viscousStress_prev = zeros(UpSampleFactor*N+1, 2*UpSampleFactor*N+1, 4);
-epsilbrev_prev = zeros(UpSampleFactor*N+1, 2*UpSampleFactor*N+1, 4);
-
-%%
 ErrMemForce = zeros(Numframe,1);
 ErrMemMomentForce = zeros(Numframe,1);
 
@@ -86,7 +82,7 @@ for nstep = 1:NSTEPS
                                          elemDofNum, ...
                                          unodal, Telem, ...
                                          numGaussPoints);
-    
+
     TotalInflow(nframe) = inflow;
     TotalDischarge(nframe) = outflow;
     MassBalanceError(nframe) = ((inflow-outflow)/(inflow+outflow))*100;
