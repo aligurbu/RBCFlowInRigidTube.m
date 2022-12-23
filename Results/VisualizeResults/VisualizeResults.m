@@ -47,4 +47,6 @@ blackBackground = false; % if false then white background
 
 VisualizeIsotropicMembraneTensionInVessel
 
+% CaptureFramesIsotropicMembraneTensionInVessel
+
 fclose('all');
