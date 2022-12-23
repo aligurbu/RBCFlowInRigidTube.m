@@ -1,6 +1,7 @@
 %% Analyze the results
 clear all; close all; clc;
 addpath(genpath('../../../RBCFlowInRigidTube.m'))
+verbose_Plot = false;
 
 %% Input the model and parameters for the analysis from Models folder
 LoadElasRBC_Short_Pr4_2_Time0_75s
@@ -21,3 +22,10 @@ NSTEPS = length(Time);
 
 %%
 timeStepIncrement = 1;
+
+%% Analyze the results of RBCInVessel
+AnalyzeResults_RBCInVessel
+
+
+%%
+fclose('all');
