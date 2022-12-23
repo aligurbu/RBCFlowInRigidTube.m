@@ -94,7 +94,17 @@ maxDT = 0.1; % declaring very high number to initialize it.
 minDT = DT;
 maxStableDT = 0;
 
+%% Gauss quadrature for the regular integrals
+%% $\chi \not\in \Gamma_e$ 
+numGaussPoints = 10;
+[gx, gw] = lgwt(numGaussPoints, -1, 1);
 
+%% Gauss quadrature for the weakly- and nearly-singular integrals 
+%% $\chi \in \Gamma_e$ or dmin/LengE < 1
+numGaussPointsPolar = 20;
+%% Gauss point and weights along the radius and theta in polar coordinates
+[grx, grw] = lgwt(numGaussPointsPolar, -1, 1); 
+[gtx, gtw] = lgwt(numGaussPointsPolar, -1, 1); 
 
 
 
