@@ -142,7 +142,10 @@ bcselem(1,wallelem) = 1; % Dirichlet B.C; velocity is known
 DirichletElem = wallelem; % = find(bcselem);
 NeumannElem = union(inletelem,outletelem); % = find(~bcselem);
 
-
+%% Set prescribed (inlet) traction
+Telem = zeros(numDofPerElem, numElem);
+%% Prescribe the inlet pressure on the inlet element nodes in x-direction
+Telem(1:numDofPerNode:numDofPerElem,inletelem) = InletPressure; 
 
 
 
