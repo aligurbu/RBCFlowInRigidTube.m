@@ -33,5 +33,8 @@ VisualizeSettings
 %% Area Error and Volume Error
 Area_Volume_Change
 
+%% Forces and moments balance errors
+Force_Moment_BalanceError
+
 %%
 fclose('all');
