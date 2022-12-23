@@ -7,12 +7,16 @@
 %%
 clear all; close all; clc;
 addpath(genpath('../RBCFlowInRigidTube.m'))
-verbose_Plot = true;
+verbose_Plot = false;
 
 %% Input the model and parameters for the analysis from Models folder
-% LoadElasRBC_Short_Pr4_2_Time0_75s
+LoadElasRBC_Short_Pr4_2_Time0_75s
 % LoadElasRBC_RefCons_6mic_Pr8
-LoadLongConstrictedVessel_16El
+% LoadElasRBC_LongConVes_Pr8
+
+% LoadMemVisRBC_Short_muMem10_Pr4_2_Time0_75
+% LoadMemVisRBC_RefCons_6mic_muMem_3_18_Pr8
+% LoadMemVisRBC_LongConVes_muMem_3_18_P40
 
 %% Vessel set-up
 ParametersForTheAnalysis_Vessel
