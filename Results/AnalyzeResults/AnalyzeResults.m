@@ -36,5 +36,9 @@ Area_Volume_Change
 %% Forces and moments balance errors
 Force_Moment_BalanceError
 
+%% Three axes of ellipsoid with mass and volume of RBC
+AxesOfEllipsoid
+
+
 %%
 fclose('all');
