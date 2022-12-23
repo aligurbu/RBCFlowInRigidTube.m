@@ -147,7 +147,8 @@ Telem = zeros(numDofPerElem, numElem);
 %% Prescribe the inlet pressure on the inlet element nodes in x-direction
 Telem(1:numDofPerNode:numDofPerElem,inletelem) = InletPressure; 
 
-
+%% Set prescribed velocity (all zero for now)
+unodal = zeros(numDofPerNode, numNodes);
 
 
 
