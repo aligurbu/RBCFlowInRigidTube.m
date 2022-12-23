@@ -36,11 +36,11 @@ Area_Volume_Change
 %% Forces and moments balance errors
 Force_Moment_BalanceError
 
-%% Vessel mass balance and mass balace error
-Vessel_Mass_BalanceError
-
 %% Vessel forces and moments balance errors
 Vessel_Force_Moment_BalanceError
+
+%% Vessel mass balance and mass balace error
+Vessel_Mass_BalanceError
 
 %% Three axes of ellipsoid with mass and volume of RBC
 AxesOfEllipsoid
