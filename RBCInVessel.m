@@ -110,4 +110,12 @@ for nstep = 0:NSTEPS
                               numNodes, numDofPerNode, ModelSize, ...
                               ToleranceGMRES, Solution);
 
+    if (nstep==0 || mod(nstep,SaveAtIncrementalSteps)==0)
+        %% Write output to file
+        writef = f(:)';
+        fwrite(fidMemFor,writef,'double');
+        writeSolution = Solution';
+        fwrite(fidSol,writeSolution,'double');
+    end
+
 end
