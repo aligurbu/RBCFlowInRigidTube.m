@@ -50,3 +50,12 @@ xi = Xi; axi = aXi; bxi = bXi;
 
 viscousStress_prev = zeros(UpSampleFactor*N+1, 2*UpSampleFactor*N+1, 4);
 epsilbrev_prev = zeros(UpSampleFactor*N+1, 2*UpSampleFactor*N+1, 4);
+
+%% Set up time integration
+Solution = zeros(ModelSize,1);
+
+%% Set up output file
+fidTime = fopen(['Time_',name,'.dat'],'w');
+fidCoord = fopen(['Coord_',name,'.dat'],'w');
+fidMemFor = fopen(['MemFor_',name,'.dat'],'w');
+fidSol = fopen(['Sol_',name,'.dat'],'w');
