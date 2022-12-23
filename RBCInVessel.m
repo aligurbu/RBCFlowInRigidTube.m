@@ -44,3 +44,9 @@ end
 mask_a = repmat(triu(true(N+1),0),1,1,3);
 mask_b = mask_a;
 mask_b(1,:,:) = false;
+
+%% Initialization
+xi = Xi; axi = aXi; bxi = bXi;
+
+viscousStress_prev = zeros(UpSampleFactor*N+1, 2*UpSampleFactor*N+1, 4);
+epsilbrev_prev = zeros(UpSampleFactor*N+1, 2*UpSampleFactor*N+1, 4);
