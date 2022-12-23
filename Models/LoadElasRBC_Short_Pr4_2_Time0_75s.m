@@ -111,8 +111,3 @@ coordLocation = false(size(coord,2),1);
 
 %% Set the center of the mass of RBC to initial position, InitXi
 constrainCenterOfMassToInitialPosition = true;
-
-%% Vessel set-up
-ParametersForTheAnalysis_Vessel
-
-
