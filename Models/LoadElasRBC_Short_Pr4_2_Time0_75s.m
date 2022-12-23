@@ -106,7 +106,18 @@ numGaussPointsPolar = 20;
 [grx, grw] = lgwt(numGaussPointsPolar, -1, 1); 
 [gtx, gtw] = lgwt(numGaussPointsPolar, -1, 1); 
 
+%% Set-up
+numNodes = size(coord,2); % Total number of nodes in the model
 
+numElem = size(connect,2); % Total number of elements in the model
+
+numDofPerNode = size(coord,1); % Number of velocity components
+
+numNodesPerElem = size(connect,1); % Number of nodes per element
+
+numDofPerElem = numNodesPerElem * numDofPerNode; 
+                                 % Number of DOF associated with an element
+ModelSize = (numNodes*numDofPerNode + 3*(N+1)^2);
 
 
 
