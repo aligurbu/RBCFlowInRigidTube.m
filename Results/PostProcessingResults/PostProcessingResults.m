@@ -36,5 +36,8 @@ TransparencyInd = 0;
 %% Set-up the evaluation points
 SetUp_EvaluationPoints
 
+%% Post-processing
+PostProcessing_RBCInVessel
+
 %%
 fclose('all');
