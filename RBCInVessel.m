@@ -39,3 +39,8 @@ end
 [FieldPts, BasisFn, NormalV, Weights] = ...
                    FieldProperties(coord, connect, numElem, ...
                                    numDofPerNode, numNodesPerElem, gx, gw);
+
+%% Masks to go between Spherepack and vector representations of SH coeff
+mask_a = repmat(triu(true(N+1),0),1,1,3);
+mask_b = mask_a;
+mask_b(1,:,:) = false;
