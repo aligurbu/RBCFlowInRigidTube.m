@@ -59,3 +59,15 @@ fidTime = fopen(['Time_',name,'.dat'],'w');
 fidCoord = fopen(['Coord_',name,'.dat'],'w');
 fidMemFor = fopen(['MemFor_',name,'.dat'],'w');
 fidSol = fopen(['Sol_',name,'.dat'],'w');
+
+%% Time-stepping
+for nstep = 0:NSTEPS
+    if (nstep==0 || mod(nstep,SaveAtIncrementalSteps)==0)
+        %% Write the time to file
+        fwrite(fidTime, Time, 'double');
+        %% Write the position of cell to file
+        cxi = [axi(mask_a); bxi(mask_b)];
+        fwrite(fidCoord, cxi, 'double');
+    end
+
+end
