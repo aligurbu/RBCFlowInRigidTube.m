@@ -38,3 +38,13 @@ BendingModulus = 2*10^(-19); % N.m
 EB = BendingModulus/RefBendingModulus; % bending modulus
 DilatationModulus = 50*ShearModulus; % N/m
 ED = DilatationModulus/RefElasticModulus; % inplane dilatational modulus
+
+%% Standard-Linear-Solid SLS model parameters
+%% Membrane viscosity
+MembraneViscoelasticity = false;
+mu_Membrane = 3.18*10^(-7); % m.Pa.s=N.s/m
+mu_Mem = mu_Membrane/(RefLength*RefViscosity); % Bq, the Boussinesq number
+ArtificialSpring = 100/3 * ShearModulus; % N/m 
+% ArtificialSpring = 6*ShearModulus; % N/m 
+RelaxationTime = mu_Membrane / ArtificialSpring; % s 
+Tau = RelaxationTime*RefShearRate; % the relaxation time of the Maxwell element
