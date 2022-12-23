@@ -159,7 +159,11 @@ for m = 1:numElem
     end
 end
 
+%% All the nodal points of the vessel reside outside of RBC surface.
+coordLocation = false(size(coord,2),1); 
 
+%% Set the center of the mass of RBC to initial position, InitXi
+constrainCenterOfMassToInitialPosition = true;
 
 
 
