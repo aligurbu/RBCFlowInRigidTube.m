@@ -135,7 +135,12 @@ DirichletDofs = find(bcs == 1); % Dofs of the wall nodes
 NeumannDofs = find(bcs == 0);   % Dofs of the inlet/outlet nodes 
                                 % excluding dofs related to the edge nodes.
 
+%% Set element boundary conditions
+bcselem = zeros(1, size(connect,2));
+bcselem(1,wallelem) = 1; % Dirichlet B.C; velocity is known
 
+DirichletElem = wallelem; % = find(bcselem);
+NeumannElem = union(inletelem,outletelem); % = find(~bcselem);
 
 
 
