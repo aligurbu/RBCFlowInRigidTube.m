@@ -7,7 +7,6 @@
 
 %% Create geometry of RBC: undeformed geometry of an RBC
 Xi = getRBCInitialGeometry(thet,phi,InitXi,InitOrient);
-% Xi = getSphereGeometry(thet, phi, Radius, InitXi, InitOrient);
 
 %% Initial conditions:
 %% spherical harmonics coefficients of the undeformed RBC coordinates
