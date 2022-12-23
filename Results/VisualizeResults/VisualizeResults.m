@@ -41,7 +41,8 @@ blackBackground = true; % if false then white background
 
 %% Visualization of RBC while flowing in a vessel
 
-VisualizeMembraneShapeInVessel
+% VisualizeMembraneShapeInVessel
 
+CaptureFramesMembraneShapeInVessel
 
 fclose('all');
