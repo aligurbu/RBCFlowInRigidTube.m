@@ -50,7 +50,7 @@ RelaxationTime = mu_Membrane / ArtificialSpring; % s
 Tau = RelaxationTime*RefShearRate; % the relaxation time of the Maxwell element
 
 %% Applied inlet pressure 
-PressureGradient = 8; % mmHg/mm
+PressureGradient = 40; % mmHg/mm
 % 1 mmHg = 133.322 Pa
 PressureGradient = PressureGradient*133.322*10^(3); % Pa/meter
 PressureDrop = PressureGradient*(TubeLength*RefLength); % Pa
@@ -76,7 +76,7 @@ ToleranceGMRES = 10^(-6);
 
 %% Time step
 %% Forward Euler
-TimeIncrement = 5*10^(-6); % s
+TimeIncrement = 1*10^(-6); % s
 DT = TimeIncrement*RefShearRate;
 EndTime_ = 0.15; % s
 EndTime = EndTime_*RefShearRate;
