@@ -118,4 +118,19 @@ for nstep = 0:NSTEPS
         fwrite(fidSol,writeSolution,'double');
     end
 
+    %% Display
+    f_norm = sqrt(reshape(f(:,:,1).^2+f(:,:,2).^2+f(:,:,3).^2,nlat,nlon));
+    u_norm = sqrt(reshape(u(:,:,1).^2+u(:,:,2).^2+u(:,:,3).^2,nlat,nlon));
+
+    fprintf('# of step %d;\t remaining # of steps %d; \n', ...
+             nstep, NSTEPS-nstep)
+    fprintf('DT: %g;\t Time %d \n', DT, Time);
+    fprintf('normf = %g;\t normu = %g\n',max(max(f_norm)),max(max(u_norm)))
+    fprintf('Position of RBC min: %g max: %g \n', ...
+             min(min(xi(:,:,1))), max(max(xi(:,:,1))))
+    fprintf('Number of GMRES iteration: %d\n', ITER(2))
+    fprintf('# of stableCounter %d\n', stableCounter)
+    fprintf('# of counterTime %d\n', counterTime)
+    fprintf('\n')
+
 end
