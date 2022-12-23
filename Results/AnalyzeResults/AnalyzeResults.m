@@ -26,6 +26,12 @@ timeStepIncrement = 1;
 %% Analyze the results of RBCInVessel
 AnalyzeResults_RBCInVessel
 
+%% Plots
+%% Visualization settings
+VisualizeSettings
+
+%% Area Error and Volume Error
+Area_Volume_Change
 
 %%
 fclose('all');
