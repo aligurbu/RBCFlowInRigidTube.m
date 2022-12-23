@@ -133,4 +133,9 @@ for nstep = 0:NSTEPS
     fprintf('# of counterTime %d\n', counterTime)
     fprintf('\n')
 
+    %% Update state (Forward Euler time scheme)
+    axi = axi + DT*au;
+    bxi = bxi + DT*bu;
+    xi = shsgcm(axi,bxi);
+
 end
