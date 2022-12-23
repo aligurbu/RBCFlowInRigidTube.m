@@ -163,4 +163,17 @@ for nstep = 0:NSTEPS
                                              stableCounter, maxStableDT, ...
                                              nstep);
 
+    %% Return if RBC touches the outlet surface
+    %% or time is larger than the final time
+    if max(max(xi(:,:,1))) > max(coord(1,:)) || Time - DT > EndTime
+        load handel
+        sound(y,Fs)
+        fclose('all');
+        TimeInHours = toc(Starttime)/60/60 % in hours
+        return
+    end
 end
+load handel
+sound(y,Fs)
+fclose('all');
+TimeInHours = toc(Starttime)/60/60 % in hours
