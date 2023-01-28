@@ -1,6 +1,6 @@
 %% Load the model specific parameters
 %% 
-name = 'MemVisRBC_LongConVes_muMem_3_18_P40';
+name = 'MemVisRBC_LongConVes_muMem_3_18_Pr40';
 
 %% Reference parameters 
 ReferenceParameters
