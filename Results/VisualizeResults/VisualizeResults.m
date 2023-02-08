@@ -11,7 +11,7 @@ LoadElasRBC_Short_Pr4_2_Time0_75s
 
 % LoadMemVisRBC_Short_muMem10_Pr4_2_Time0_75
 % LoadMemVisRBC_RefCons_6mic_muMem_3_18_Pr8
-% LoadMemVisRBC_LongConVes_muMem_3_18_P40
+% LoadMemVisRBC_LongConVes_muMem_3_18_Pr40
 
 %% Set up output file
 fidCoord = fopen(['Coord_',name,'.dat'],'r');
