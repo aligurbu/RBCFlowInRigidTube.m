@@ -51,7 +51,7 @@ for nstep = 1:NSTEPS
     Vertices(:,:,nframe) = reshape(xiplot,(nlat+2)*nlon,3);
 end
 %% Dimensionalization 
-T_step = T_step/RefShearRate; % in seconds
+T_step = (T_step*1000)/RefShearRate; % in milli seconds
 coord = coord*RefLength*10^(6); % \mum
 Vertices = Vertices*RefLength*10^(6); % \mum
 %%
@@ -80,7 +80,7 @@ camlight
 material Dull
 set(gca,'DataAspectRatio',[1 1 1])
 
-ht = title({sprintf('Time = %4.4f sec',T_step(1))},'Color',ColorInd);
+ht = title({sprintf('Time = %4.4f ms',T_step(1))},'Color',ColorInd);
 set(ht,'FontName','cambria math','FontSize',12)
 view(viewInd)
 axis equal
@@ -100,7 +100,7 @@ if WritetoGIF
     for id = 1:length(T_step)
         %% Update graphics data. This is more efficient than recreating plots.
         set(hRBC, 'Vertices', Vertices(:,:,id));
-        set(ht, 'String', {sprintf('Time = %4.4f sec',T_step(id))})
+        set(ht, 'String', {sprintf('Time = %4.2f ms',T_step(id))})
 
         %% Get frame as an image
         frame = getframe(gcf);
@@ -124,7 +124,7 @@ else % Write to MP4 file
     for id = 1:length(T_step)
         %% Update graphics data. This is more efficient than recreating plots.
         set(hRBC, 'Vertices', Vertices(:,:,id));
-        set(ht, 'String', {sprintf('Time = %4.4f sec',T_step(id))})
+        set(ht, 'String', {sprintf('Time = %4.2f ms',T_step(id))})
         
         %% Get frame as an image
         frame = getframe(gcf);
