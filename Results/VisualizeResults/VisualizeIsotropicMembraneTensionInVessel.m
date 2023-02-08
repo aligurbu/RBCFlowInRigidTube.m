@@ -150,7 +150,7 @@ if WritetoGIF
                'CData', Field(:,:,id), ...
                'FaceAlpha', TransparencyInd, ...
                'FaceColor','interp', 'EdgeColor','none')
-        set(ht, 'String', {sprintf('Time = %4.4f ms',T_step(id))})
+        set(ht, 'String', {sprintf('Time = %4.2f ms',T_step(id))})
         %% Get frame as an image
         frame = getframe(gcf);
 
@@ -178,7 +178,7 @@ else % Write to MP4 file
                'CData', Field(:,:,id), ...
                'FaceAlpha', TransparencyInd, ...
                'FaceColor','interp', 'EdgeColor','none')
-        set(ht, 'String', {sprintf('Time = %4.4f ms',T_step(id))})
+        set(ht, 'String', {sprintf('Time = %4.2f ms',T_step(id))})
         
         %% Get frame as an image
         frame = getframe(gcf);
