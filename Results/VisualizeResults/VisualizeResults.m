@@ -22,7 +22,7 @@ Time = fread(fidTime,'double');
 NSTEPS = length(Time);
 
 %%
-timeStepIncrement = 1;
+timeStepIncrement = 4;
 FRAMES = floor(linspace(1,NSTEPS,5));
 TimesOfFrames = Time(FRAMES)/RefShearRate % in seconds
 
