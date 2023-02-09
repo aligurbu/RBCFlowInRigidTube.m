@@ -21,11 +21,11 @@ Time = fread(fidTime,'double');
 NSTEPS = length(Time);
 
 %%
-timeStepIncrement = 1;
+timeStepIncrement = 4;
 
 %% Choose a view angle
-% viewInd = [0 90];
-viewInd = [-45 30];
+viewInd = [0 90];
+% viewInd = [-45 30];
 
 %% Choose a background color for visualization
 blackBackground = true; % if false then white background
@@ -40,8 +40,8 @@ SetUp_EvaluationPoints
 %% Post-processing
 %% Run once and load the results of post-processing.
 %% Computing the velocity field at the evaluation points takes times
-PostProcessing_RBCInVessel
-return
+% PostProcessing_RBCInVessel
+% return
 if ~MembraneViscoelasticity
     if strcmp(nameVessel,'ShortMicrocapillary_16El')
         load PostProc_ElasRBC_Short_Pr4_2_Time0_75s.mat
@@ -137,7 +137,7 @@ for nframe = 1:Numframe
 end
 
 %% Dimensionalization
-T_step = T_step/RefShearRate; % in seconds
+T_step = T_step*1000/RefShearRate; % in ms
 CellX = CellX*(RefLength*10^(6)); % \mum
 CellY = CellY*(RefLength*10^(6)); % \mum
 CellZ = CellZ*(RefLength*10^(6)); % \mum
@@ -189,7 +189,7 @@ alpha(h, TransparencyInd) % to set transparency
 material Dull
 
 set(gca,'DataAspectRatio',[1 1 1])
-ht = title({sprintf('Time = %4.4f sec',T_step(1))},'Color',ColorInd);
+ht = title({sprintf('Time = %4.4f ms',T_step(1))},'Color',ColorInd);
 set(ht,'FontName','cambria math','FontSize',12)
 
 Patch_Mesh(coord, connect, 0.1)
@@ -253,7 +253,7 @@ for id = 1:length(T_step)
            'YData', CellY(:,:,id), ...
            'ZData', CellZ(:,:,id), ...
            'FaceAlpha', TransparencyInd);
-    set(ht, 'String', {sprintf('Time = %4.4f sec',T_step(id))})
+    set(ht, 'String', {sprintf('Time = %4.2f ms',T_step(id))})
     set(cLineSpeed, 'ZData', LineSpeed(:,:,id));
     set(cCirclePtsmid, 'ZData', CrossSectionSpeedmid(:,:,id));
     set(cCirclePtsinlet, 'ZData', CrossSectionSpeedinlet(:,:,id));
