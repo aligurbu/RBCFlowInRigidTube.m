@@ -21,7 +21,7 @@ Time = fread(fidTime,'double');
 NSTEPS = length(Time);
 
 %%
-timeStepIncrement = 4;
+timeStepIncrement = 1;
 
 %% Choose a view angle
 viewInd = [0 90];
@@ -56,7 +56,7 @@ else
     elseif strcmp(nameVessel,'RefCons_6mic_Ves_16El')
         load PostProc_MemVisRBC_RefCons_6mic_muMem_3_18_Pr8.mat
     elseif strcmp(nameVessel,'LongConstrictedVessel_16El')
-        load PostProc_MemVisRBC_LongConVes_muMem_3_18_P40.mat
+        load PostProc_MemVisRBC_LongConVes_muMem_3_18_Pr40.mat
     end
 end
 Numframe = length(T_step);
