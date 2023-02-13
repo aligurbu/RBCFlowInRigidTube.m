@@ -7,15 +7,31 @@
 
 ---
 
+## Purely elastic membrane model
+
+---
+
 ### Straight microcapillary
 
 | Membrane shape | In-plane isotropic membrane tension |
 | :-: | :-: |
 |<img src="https://github.com/aligurbu/RBCFlowInRigidTube.m/blob/main/Results/ElasRBC_Short_Pr4_2_Time0_75s/MembraneShapeInVesselElasRBC_Short_Pr4_2_Time0_75s_xy.gif">|<img src="https://github.com/aligurbu/RBCFlowInRigidTube.m/blob/main/Results/ElasRBC_Short_Pr4_2_Time0_75s/isotropicTensionInVesselElasRBC_Short_Pr4_2_Time0_75s_xy.gif">|
 
-#### The fluid flow field inside and outside of the red blood cell
+|The fluid flow field inside and outside of the red blood cell|
+| :-: |
+|<video src="https://user-images.githubusercontent.com/13091572/218377243-10ea4ad7-82cd-4203-876b-6302f3812e9a.mp4" >|
 
-<video src="https://user-images.githubusercontent.com/13091572/218377243-10ea4ad7-82cd-4203-876b-6302f3812e9a.mp4" >
+---
+
+### Short constricted microcapillary
+
+| Membrane shape | In-plane isotropic membrane tension |
+| :-: | :-: |
+|<img src="https://github.com/aligurbu/RBCFlowInRigidTube.m/blob/main/Results/ElasRBC_RefCons_6mic_Pr8/MembraneShapeInVesselElasRBC_RefCons_6mic_Pr8_xy.gif">|<img src="https://github.com/aligurbu/RBCFlowInRigidTube.m/blob/main/Results/ElasRBC_RefCons_6mic_Pr8/isotropicTensionInVesselElasRBC_RefCons_6mic_Pr8_xy.gif">|
+
+|The fluid flow field inside and outside of the red blood cell|
+| :-: |
+|<video src=>|
 
 ## Citation
 
