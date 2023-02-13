@@ -11,8 +11,7 @@
 
 | Membrane shape | In-plane isotropic membrane tension |
 | :-: | :-: |
-|<img src="https://github.com/aligurbu/RBCFlowInRigidTube.m/blob/main/Results/ElasRBC_Short_Pr4_2_Time0_75s/MembraneShapeInVesselElasRBC_Short_Pr4_2_Time0_75s_xy.gif">
-|<img src="https://github.com/aligurbu/RBCFlowInRigidTube.m/blob/main/Results/ElasRBC_Short_Pr4_2_Time0_75s/isotropicTensionInVesselElasRBC_Short_Pr4_2_Time0_75s_xy.gif">|
+|<img src="https://github.com/aligurbu/RBCFlowInRigidTube.m/blob/main/Results/ElasRBC_Short_Pr4_2_Time0_75s/MembraneShapeInVesselElasRBC_Short_Pr4_2_Time0_75s_xy.gif">|<img src="https://github.com/aligurbu/RBCFlowInRigidTube.m/blob/main/Results/ElasRBC_Short_Pr4_2_Time0_75s/isotropicTensionInVesselElasRBC_Short_Pr4_2_Time0_75s_xy.gif">|
 
 #### The fluid flow field inside and outside of the red blood cell
 
