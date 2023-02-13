@@ -9,19 +9,14 @@
 
 ### Straight microcapillary
 
-#### Membrane shape
-| :-: |
-|<img src="https://github.com/aligurbu/RBCFlowInRigidTube.m/blob/main/Results/ElasRBC_Short_Pr4_2_Time0_75s/MembraneShapeInVesselElasRBC_Short_Pr4_2_Time0_75s_xy.gif">|
-
-#### In-plane isotropic membrane tension
-| :-: |
+| Membrane shape | In-plane isotropic membrane tension |
+| :-: | :-: |
+|<img src="https://github.com/aligurbu/RBCFlowInRigidTube.m/blob/main/Results/ElasRBC_Short_Pr4_2_Time0_75s/MembraneShapeInVesselElasRBC_Short_Pr4_2_Time0_75s_xy.gif">
 |<img src="https://github.com/aligurbu/RBCFlowInRigidTube.m/blob/main/Results/ElasRBC_Short_Pr4_2_Time0_75s/isotropicTensionInVesselElasRBC_Short_Pr4_2_Time0_75s_xy.gif">|
 
-#### Membrane forces and the fluid flow field inside and outside of the red blood cell
+#### The fluid flow field inside and outside of the red blood cell
 
-| The fluid flow field inside and outside of the red blood cell|
-| :-: |
-|<video src="https://github.com/aligurbu/RBCFlowInRigidTube.m/blob/main/Results/ElasRBC_Short_Pr4_2_Time0_75s/PostProcessingElasRBC_Short_Pr4_2_Time0_75s.mp4" >|
+<video src="https://user-images.githubusercontent.com/13091572/218377243-10ea4ad7-82cd-4203-876b-6302f3812e9a.mp4" >
 
 ## Citation
 
