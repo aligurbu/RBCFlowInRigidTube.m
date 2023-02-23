@@ -91,8 +91,19 @@
 ## Citation
 
     @phdthesis{gurbuz2021Thesis,
-    title={Simulations of Red Blood Cell Flow by Boundary Integral Methods},
-    author={G\"urb\"uz, Ali},
-    year={2021},
-    school={State University of New York at Buffalo}
+        title={Simulations of Red Blood Cell Flow by Boundary Integral Methods},
+        author={G\"urb\"uz, Ali},
+        year={2021},
+        school={State University of New York at Buffalo}
+    }
+    
+    @software{RBCFlowInRigidTube_m,
+      author       = {Ali G\"urb\"uz},
+      title        = {RBCFlowInRigidTube.m},
+      month        = Feb,
+      year         = 2023,
+      publisher    = {Zenodo},
+      version      = {v1.0},
+      doi          = {10.5281/zenodo.7668539},
+      url          = {https://doi.org/10.5281/zenodo.7668539}
     }
